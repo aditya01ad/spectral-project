@@ -1,5 +1,6 @@
-from sage.all import Graph, graphs
+#from sage.all import Graph, graphs
 import numpy as np
+from graph_utils_sage import create_G_n_k
 from ds_heuristic_sage import check_ds_heuristic
 
 def create_example_graph():
@@ -23,7 +24,7 @@ def main():
 
     # You can replace this with your own graph loading mechanism.
     # For example: G = Graph('my_graph.g6')
-    G = create_example_graph()
+    G = create_G_n_k(6,3)  #create_example_graph()
 
     print(f"\nAnalyzing input graph G with {G.num_verts()} vertices and {G.num_edges()} edges.")
     print("Running the Godsil-McKay switching heuristic...")

@@ -1,5 +1,13 @@
 import numpy as np
-from sage.all import Graph
+#from sage.all import Graph
+
+def create_G_n_k(n,k):
+    Kn = graphs.CompleteGraph(n)
+    g = Kn
+    for i in range(k) :
+        g.add_vertex(n+i)
+        g.add_edge(i,n+i)
+    return g
 
 def get_spectrum(G):
     """
