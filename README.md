@@ -20,12 +20,16 @@ This project explores several core topics in algebraic and spectral graph theory
 
 ```
 spectral-project/
-├── cl_repo/repo1/      # Core zero-forcing and spectral algorithms
-├── py_codes/           # Python implementations
-│   └── DS_NDS/         # DS/NDS property checking (NetworkX + SageMath)
-├── sage-learning/      # SageMath scripts and Jupyter notebooks
-├── geo_graphs/         # GeoGebra graph visualization tools
-└── petersen.gml        # Petersen graph sample file
+├── cl_repo/repo1/          # Core zero-forcing and spectral algorithms
+├── py_codes/               # Python implementations
+│   ├── DS_NDS/             # DS/NDS property checking (NetworkX + SageMath)
+│   │   ├── find_ds/        # Finding DS-mates and cospectral pairs
+│   │   └── prop_check/     # DS property checker (main entry point)
+│   └── sp_graphs/          # Spectral graph utilities (Hamming graphs, etc.)
+├── sage-learning/          # SageMath scripts and Jupyter notebooks
+├── sage-graphs/            # Graph data files (.g6) and analysis notebooks
+├── geo_graphs/             # GeoGebra graph visualization tools
+└── petersen.gml            # Petersen graph sample file
 ```
 
 ---

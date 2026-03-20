@@ -114,9 +114,9 @@ if __name__ == '__main__':
     # result_classes = find_cospectral_graphs(v_val, e_val)
     # print_results(result_classes)
 
-    # Another example: v=4, e=4
+    # Another example: v=6, e=6
     print("\n" + "="*40 + "\n")
-    print("Finding cospectral graphs for v=4, e=4...")
+    print("Finding cospectral graphs for v=6, e=6...")
     v_val = 6
     e_val = 6
     result_classes = find_cospectral_graphs(v_val, e_val)
