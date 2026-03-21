@@ -17,21 +17,20 @@ TOL = 2**(-52)
 ###             main                        ###
 ###############################################
 def main(arg):
-    a1 = array([[0,-1,0,0,0,-1,0,-1,0,0],[-1,0,-1,0,0,0,-1,-1,0,0],[0,-1,0,-1,0,0,-1,0,-1,0],
-        [0,0,-1,0,-1,0,0,-1,-1,0],[0,0,0,-1,0,-1,0,0,-1,-1],[-1,0,0,0,-1,0,-1,0,0,-1],
-        [0,-1,-1,0,0,-1,0,0,0,-1],[-1,-1,0,-1,0,0,0,0,-1,0],[0,0,-1,-1,-1,0,0,-1,0,0],
-        [-1,0,0,0,-1,-1,-1,0,0,0]])
-    g1 = Graph(a1)
-    zf_num1 = zf_num_wf(g1,std_forcing_rule)
-    psd_zf_num1 = zf_num_wf(g1,psd_forcing_rule)
-    skw_zf_num1 = zf_num_wf(g1,skw_forcing_rule)
-    print(zf_num1)
-    print(psd_zf_num1)
-    print(skw_zf_num1)
-    draw_shell(g1)
-    plt.show()
-    quit()
     try:
+        a1 = array([[0,-1,0,0,0,-1,0,-1,0,0],[-1,0,-1,0,0,0,-1,-1,0,0],[0,-1,0,-1,0,0,-1,0,-1,0],
+            [0,0,-1,0,-1,0,0,-1,-1,0],[0,0,0,-1,0,-1,0,0,-1,-1],[-1,0,0,0,-1,0,-1,0,0,-1],
+            [0,-1,-1,0,0,-1,0,0,0,-1],[-1,-1,0,-1,0,0,0,0,-1,0],[0,0,-1,-1,-1,0,0,-1,0,0],
+            [-1,0,0,0,-1,-1,-1,0,0,0]])
+        g1 = Graph(a1)
+        zf_num1 = zf_num_wf(g1,std_forcing_rule)
+        psd_zf_num1 = zf_num_wf(g1,psd_forcing_rule)
+        skw_zf_num1 = zf_num_wf(g1,skw_forcing_rule)
+        print(zf_num1)
+        print(psd_zf_num1)
+        print(skw_zf_num1)
+        draw_shell(g1)
+        plt.show()
         # graph order
         n = int(arg[0])
         # forcing rule

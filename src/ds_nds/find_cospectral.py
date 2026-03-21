@@ -53,7 +53,8 @@ def find_cospectral_graphs(v, e):
         # We get the coefficients from the eigenvalues and round them to handle
         # floating point inaccuracies. We use a tuple of coefficients as a
         # hashable dictionary key.
-        eigenvalues = np.linalg.eigvals(matrix)
+        # Use eigvalsh for symmetric matrices: faster and returns real values.
+        eigenvalues = np.linalg.eigvalsh(matrix)
         poly_coeffs = np.poly(eigenvalues)
         poly_tuple = tuple(np.round(poly_coeffs, decimals=5))
 
