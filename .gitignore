@@ -60,6 +60,9 @@ ipython_config.py
 .idea/
 *.iml
 
+# Repo tool metadata
+.repo/
+
 # macOS
 .DS_Store
 
