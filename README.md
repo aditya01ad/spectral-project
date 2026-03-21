@@ -20,12 +20,35 @@ This project explores several core topics in algebraic and spectral graph theory
 
 ```
 spectral-project/
-├── cl_repo/repo1/      # Core zero-forcing and spectral algorithms
-├── py_codes/           # Python implementations
-│   └── DS_NDS/         # DS/NDS property checking (NetworkX + SageMath)
-├── sage-learning/      # SageMath scripts and Jupyter notebooks
-├── geo_graphs/         # GeoGebra graph visualization tools
-└── petersen.gml        # Petersen graph sample file
+├── data/                       # Graph data files
+│   ├── g6/                     # graph6-format graph files (.g6)
+│   ├── gml/                    # GML graph files (e.g. Petersen graph)
+│   └── ggb/                    # GeoGebra graph files (.ggb)
+│
+├── notebooks/                  # Jupyter / SageMath notebooks
+│   ├── learning/               # Tutorial & lecture notebooks (Lect-1 … Lect-3)
+│   ├── research/               # Research & analysis notebooks
+│   └── scratch/                # Exploratory / untitled notebooks
+│
+└── src/                        # Source code
+    ├── ds_nds/                 # DS / NDS property analysis
+    │   ├── find_cospectral.py  # Enumerate cospectral graph pairs
+    │   ├── ds_heuristic.py     # Godsil-McKay DS heuristic (NetworkX)
+    │   ├── graph_utils.py      # Graph construction utilities
+    │   ├── main.py             # DS property check entry point
+    │   ├── sage/               # SageMath DS scripts (.sage)
+    │   └── sage_analyze/       # SageMath DS analysis utilities
+    ├── spectral/               # Spectral graph utilities
+    │   └── hm_graph.py         # Hamming graph construction
+    ├── zero_forcing/           # Zero-forcing & minimum-rank algorithms
+    │   ├── zero_forcing.py     # Zero-forcing number algorithms
+    │   ├── min_rank.py         # Skew minimum rank (SymPy)
+    │   ├── cospectral_zf.py    # Cospectral + zero-forcing search
+    │   ├── reg_cospectral_zf.py
+    │   └── nauty_geng_reader.py
+    └── geo/                    # GeoGebra visualisation tools
+        ├── decode_ggb.py
+        └── ggb_graph.py
 ```
 
 ---
@@ -45,14 +68,14 @@ spectral-project/
 
 ```bash
 # Check DS property of a graph
-cd py_codes/DS_NDS/prop_check && python main.py
+cd src/ds_nds && python main.py
 
 # Compute zero-forcing number
-cd cl_repo/repo1 && python zero_forcing.py
+cd src/zero_forcing && python zero_forcing.py
 
 # Compute skew minimum rank
-cd cl_repo/repo1 && python min_rank.py
+cd src/zero_forcing && python min_rank.py
 
 # Search for cospectral graph pairs
-cd cl_repo/repo1 && python cospectral_zf.py
+cd src/zero_forcing && python cospectral_zf.py
 ```
